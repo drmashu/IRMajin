@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>コマンド名</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let command of auth.user.commands">
+      <td>{{command.name}}</td>
+      <td><button (click)="logout({{command.cid}})"></button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,16 @@
+<div *ngIf="auth.user | async as user">
+  <h1>ようこそ {{user.displayName}}</h1>
+</div>
+<button (click)="logout()">ログアウト</button>
+
+<div *ngIf="auth.user | async as user">
+  <h2>ユーザー情報</h2>
+  <p>プロフィール画像:</p>
+  <img [src]="user.photoURL" style="width: 150px">
+  <!-- <p>UID: {{user.uid}}</p> -->
+  <p>名前: {{user.displayName}}</p>
+  <p>Email: {{user.email}}</p>
+  <p>コマンドリスト:
+    <button></button>
+  </p>
+</div>
